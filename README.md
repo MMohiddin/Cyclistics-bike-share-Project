@@ -23,3 +23,5 @@ The director of marketing has set the goal of designing marketing strategies aim
 The 12 months of bike-share data used in this analysis was provided by Motivation International Inc. under this [license](https://divvybikes.com/data-license-agreement) and downloaded into Google Cloud Storage to be used in BigQuery. However because of  data privacy protection I am prohibited from collecting personal data. Therefore I won't be able to connect pass purchases to credit card numbers to determine if casual riders live in the Cyclistic service area or if they have purchased multiple single passes.
 
 ### Data Manipulation and Cleaning
+
+First I uploaded all 12 months of data into different tables in BiqQuery and then combined them into one table named bikehsare_combined. I then cleaned the data and added two new coloumns called trip_duration and day_of_week. These two coloumns would allow me to see how long each rider used the bike_share and on what day during the week.

@@ -25,7 +25,7 @@ The 12 months of bike-share data used in this analysis was provided by Motivatio
 ### Data Manipulation and Cleaning
 
 First I uploaded all 12 months of data into different tables in BiqQuery and then combined them into one table named bikehsare_combined. 
-[Data combining](https://github.com/MMohiddin/Cyclistics-bike-share-Project/blob/main/Data-combining%20in%20SQL)
+[Data combining](https://github.com/MMohiddin/Cyclistics-bike-share-Project/blob/main/Data-combining.SQL)
 
 Cleaned the data and added two new coloumns called trip_duration and ride_day. These two coloumns would allow me to see how long each rider used the bike_share and on what day during the week. Rows with trip durations that where less than or more than a day where also removed.
 

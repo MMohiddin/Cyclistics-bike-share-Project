@@ -1,3 +1,7 @@
+-- Making sure there is only 3 rideable types
+SELECT DISTINCT rideable_type
+FROM cyclistic-bikeshare-1.bikeshare.bikeshare_cleaned
+
 -- Removing NULLS
 
 CREATE OR REPLACE TABLE `cyclistic-bikeshare-1.bikeshare.bikeshare_cleaned` AS
@@ -14,14 +18,15 @@ WHERE start_station_id IS NOT
  AND ended_at IS NOT NULL
  AND member_casual IS NOT NULL
 
--- Removing duplicates
+-- Checking for duplicates
 
 SELECT DISTINCT*
 FROM `cyclistic-bikeshare-1.bikeshare.bikeshare_cleaned`;
+-- There where no duplicates
 
 --Adding trip_duration_mins and ride_day coloumns into a new table
 
-CREATE OR REPLACE TABLE `cyclistic-bikeshare-1.bikeshare.2024_bikeshare` AS
+CREATE OR REPLACE TABLE `cyclistic-bikeshare-1.bikeshare.bikeshare_cleaned` AS
 SELECT ride_id, rideable_type, started_at, ended_at,
   start_station_name, start_station_id,
   end_station_name, end_station_id,
@@ -32,10 +37,11 @@ FROM `cyclistic-bikeshare-1.bikeshare.bikeshare_cleaned`;
 
 -- Removing rows where trip_duration_minutes was less than 0 or more than 1440(which a day in minutes)
 
-CREATE OR REPLACE TABLE `cyclistic-bikeshare-1.bikeshare.2024_bikeshare` AS
+CREATE OR REPLACE TABLE `cyclistic-bikeshare-1.bikeshare.bikeshare_cleaned` AS
 SELECT *
-FROM `cyclistic-bikeshare-1.bikeshare.2024_bikeshare`
-WHERE trip_duration_mins > 0 AND trip_duration_mins < 1440
+FROM `cyclistic-bikeshare-1.bikeshare.bikeshare_cleaned`
+WHERE ride_duration > 0 AND ride_duration < 1440
+
 
 -- Row count before and after cleaning 
 SELECT COUNT(*) AS original_row_count
@@ -43,7 +49,7 @@ FROM `cyclistic-bikeshare-1.bikeshare.bikeshare_combined`;
 -- original row count was 5906269
 
 SELECT COUNT(*) AS cleaned_row_count
-FROM `cyclistic-bikeshare-1.bikeshare.2024_bikeshare`;
+FROM `cyclistic-bikeshare-1.bikeshare.bikeshare_cleaned`;
 -- cleaned row count was 4202461
 
 -- After cleaning 1703808 rows where removed

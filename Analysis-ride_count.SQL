@@ -1,4 +1,4 @@
--- Calculating ride count per month, day and hour for casual vs member
+-- Calculating ride count per month, day, hour and biketype for casual vs member
 -- Month
 SELECT 
   EXTRACT (MONTH FROM started_at) as ride_month,
@@ -34,3 +34,11 @@ FROM `cyclistic-bikeshare-1.bikeshare.bikeshare_cleaned`
 GROUP BY ride_hour, member_casual 
 ORDER BY 
   member_casual, ride_hour
+-- BIKETYPE
+SELECT 
+  rideable_type,
+  member_casual,
+  COUNT (*) AS bike_count
+FROM `cyclistic-bikeshare-1.bikeshare.bikeshare_cleaned`
+GROUP BY rideable_type, member_casual
+ORDER BY bike_count

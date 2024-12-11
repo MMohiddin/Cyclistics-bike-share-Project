@@ -1,4 +1,8 @@
+  ![image](https://github.com/user-attachments/assets/97378a08-5bc0-4214-aa6c-aa5469745708)
+
+
 # Cyclistics-bike-share-Project
+
 ### **Introduction**
 
 This is the Cyclistic bike-share analysis case study I completed during the last course of the Google Data Analytics Certificate. To answer the business questions  during this case study I will be following the steps of the data analysis process :Ask, Prepare, Process, Analyse, Share and Act. In this case study I will be using SQL to answer the business question: **_How does annual members and casual riders use Cyclistic bike-share differently?_**

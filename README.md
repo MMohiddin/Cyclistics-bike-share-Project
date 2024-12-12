@@ -34,3 +34,10 @@ First I uploaded all 12 months of data into different tables in BiqQuery and the
 Cleaned the data and added two new coloumns called trip_duration and ride_day. These two coloumns would allow me to see how long each rider used the bike_share and on what day during the week. Rows with trip durations that where less than or more than a day where also removed.
 
 [Data cleaning and manipulation](https://github.com/MMohiddin/Cyclistics-bike-share-Project/blob/main/Data-CleaningandManipulation.SQL)
+
+### Analysis
+
+First I analysised the data to give me total ride count for day, month and rideable types to see how different casual and members use the bike-share services. Tableau was used to visualise results.
+![Total Ride Count ](https://github.com/user-attachments/assets/643edc9b-c2bd-4808-8eeb-0dfa75aa19e0)
+
+From this dashboard we notice that annaual members use the bike-share services more frequently than casuals across the year and during the week. This highlights that casual aren't becoming annual members as they use the services less. However, the total ride count of casual increases during weekends whilst the total ride count for members decreases. This could possibly hint that casuals use the bike_share more for leisurly reason and members use the service more for transport to work. We also notice that both casual and members prefer to use the classic more than the electric options. 

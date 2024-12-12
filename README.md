@@ -36,6 +36,7 @@ Cleaned the data and added two new coloumns called trip_duration and ride_day. T
 [Data cleaning and manipulation](https://github.com/MMohiddin/Cyclistics-bike-share-Project/blob/main/Data-CleaningandManipulation.SQL)
 
 ### Analysis
+[SQL- Total ride count](https://github.com/MMohiddin/Cyclistics-bike-share-Project/commit/768d756b40ac318ce4f3140de17d9beecbbc7abe)
 
 #### Total Ride Count
 First I analysised the data to give me total ride count for day, month and rideable types to see how different casual and members use the bike-share services. Tableau was used to visualise results.
@@ -48,6 +49,7 @@ From this dashboard we notice that annaual members use the bike-share services m
 With members ride count peaking first at 8am and second at 5pm, this indicates that annual member likely use Cyclistics services to commute to work or school 8pm is when most people would be going to work and returning back at 5pm. Whereas, the total ride count throughout the day for casual riders gradually increases before it reaches peak also at 5pm. This could hint that casual riders are mostly younger people use the bike share services during their free time after school as the average school closing time in Chicago is 3pm.
 
 #### Average Ride Duration
+[SQL-Average Ride Duration](https://github.com/MMohiddin/Cyclistics-bike-share-Project/commit/d5e41170fe1d95b3dfd80245803dfced60006bb5)
 
 ![Avg Dashboard](https://github.com/user-attachments/assets/d2ad1d59-44bd-45c2-9be1-c4a4b9653361)
 
